@@ -111,6 +111,9 @@
     document.getElementById("pdpWas").textContent=p.was?("$"+(Number.isInteger(p.was)?p.was:p.was.toFixed(2))):"";
     document.getElementById("pdpStars").innerHTML="★".repeat(p.rating)+"☆".repeat(5-p.rating)+' <span class="muted" style="font-size:.85rem">(214 reviews)</span>';
     var add=document.getElementById("pdpAdd"); if(add) add.setAttribute("data-add",id);
+    if(p.desc){ var dsc=document.getElementById("pdpDesc"); if(dsc) dsc.textContent=p.desc; }
+    var img=(window.ARBOR_ICONS||{})[p.icon];
+    if(img){ var mn=document.getElementById("pdpMain"); if(mn) mn.innerHTML=img; document.querySelectorAll(".pdp-thumb").forEach(function(t){ t.innerHTML=img; }); }
   }
   // qty stepper
   var v=document.getElementById("qtyVal");
