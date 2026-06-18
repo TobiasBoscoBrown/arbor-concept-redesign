@@ -69,11 +69,11 @@
     <div class="card-img"><span class="card-tag green">Low VOC</span><svg viewBox="0 0 100 100" fill="none" stroke="#045C3C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="30" y="34" width="40" height="42" rx="3"/><path d="M30 44h40"/><path d="M44 34c0-5 12-5 12 0"/><path d="M62 40c8-3 12 0 12 6s-5 8-10 7" stroke="#D9772E"/></svg></div>
     <div class="card-body">
       <span class="card-cat">Paint</span>
-      <span class="card-title">Premium Interior Paint — Sage</span>
+      <span class="card-title">Premium Interior Paint, Sage</span>
       <span class="stars">★★★★★</span>
       <div class="card-foot">
         <span class="price">$42<span style="font-size:.7rem;color:var(--muted);font-family:'Jost',sans-serif"></span> </span>
-        <button class="add-btn" data-add="p4" aria-label="Add Premium Interior Paint — Sage to cart"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.2 12.4a2 2 0 0 0 2 1.6h7.5a2 2 0 0 0 2-1.6L22 7H6"/></svg></button>
+        <button class="add-btn" data-add="p4" aria-label="Add Premium Interior Paint, Sage to cart"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.2 12.4a2 2 0 0 0 2 1.6h7.5a2 2 0 0 0 2-1.6L22 7H6"/></svg></button>
       </div>
     </div>
   </a><a class="card reveal" href="product.html?id=p1">
@@ -109,7 +109,7 @@
     document.getElementById("pdpCat").textContent=p.cat;
     document.getElementById("pdpPrice").textContent="$"+(Number.isInteger(p.price)?p.price:p.price.toFixed(2))+(p.unit||"");
     document.getElementById("pdpWas").textContent=p.was?("$"+(Number.isInteger(p.was)?p.was:p.was.toFixed(2))):"";
-    document.getElementById("pdpStars").innerHTML="★".repeat(p.rating)+"☆".repeat(5-p.rating)+' <span class="muted" style="font-size:.85rem">(214 reviews)</span>';
+    document.getElementById("pdpStars").innerHTML="★".repeat(p.rating)+"☆".repeat(5-p.rating)+' <span class="muted" style="font-size:.85rem">('+(p.reviews||0)+' reviews)</span>';
     var add=document.getElementById("pdpAdd"); if(add) add.setAttribute("data-add",id);
     if(p.desc){ var dsc=document.getElementById("pdpDesc"); if(dsc) dsc.textContent=p.desc; }
     var img=(window.ARBOR_ICONS||{})[p.icon];

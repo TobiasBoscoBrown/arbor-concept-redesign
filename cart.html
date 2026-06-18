@@ -72,7 +72,7 @@
       row.querySelector("[data-rm]").addEventListener("click",function(){ window.ArborCart.remove(id); render(); });
     });
     var cb=document.getElementById("checkoutBtn");
-    if(cb) cb.addEventListener("click",function(){ window.arborToast("Demo checkout — no payment is taken in this concept."); });
+    if(cb) cb.addEventListener("click",function(){ location.href="checkout.html"; });
   }
   // seed a demo cart on first visit so the page is never empty for reviewers
   if(!window.ArborCart.get().length){ window.ArborCart.seed([{id:"p2",qty:1},{id:"p1",qty:2},{id:"p4",qty:1}]); }

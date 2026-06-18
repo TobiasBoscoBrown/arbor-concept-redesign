@@ -1,0 +1,92 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checkout — Arbor</title>
+<meta name="description" content="Review your Arbor cart and check out. Pay upon completion of fulfillment.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head><body><div class="announce">Place your order now &nbsp;•&nbsp; pay upon completion of fulfillment &nbsp;•&nbsp; nationwide delivery</div>
+<header class="nav"><div class="wrap nav-inner">
+  <a class="logo" href="index.html"><svg viewBox="0 0 40 28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16 L20 5 L34 16"/></svg><span>arbor</span></a>
+  <nav class="nav-links"><a href="shop.html">Shop</a><a href="index.html#story">Our Story</a><a href="index.html#pro">Pro Account</a><a href="index.html#studio">Design Studio</a></nav>
+  <div class="nav-icons">
+    <a href="#" aria-label="Account"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg></a>
+    <a href="shop.html" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></a>
+    <a class="cart-link" href="cart.html" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.2 12.4a2 2 0 0 0 2 1.6h7.5a2 2 0 0 0 2-1.6L22 7H6"/></svg><span class="cart-badge" style="display:none">0</span></a>
+    <button class="menu-toggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</div></header>
+<div class="mobile-menu"><button class="close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <a href="shop.html">Shop</a><a href="index.html#story">Our Story</a><a href="index.html#pro">Pro Account</a><a href="index.html#studio">Design Studio</a>
+  <a href="cart.html">Cart</a>
+</div><div class="pagehead"><div class="wrap"><div class="crumb"><a href="index.html">Home</a> / <a href="cart.html">Cart</a> / Checkout</div><h1>Checkout</h1></div></div><section style="padding-top:48px"><div class="wrap"><div class="checkout-layout">
+  <form id="coForm">
+    <div class="co-section">
+      <h3><span class="co-step">1</span> Contact</h3>
+      <div class="form-grid">
+        <div class="field"><label>Email</label><input type="email" placeholder="you@email.com" required></div>
+        <div class="field"><label>Phone</label><input type="tel" placeholder="(555) 555-5555"></div>
+      </div>
+    </div>
+    <div class="co-section">
+      <h3><span class="co-step">2</span> Shipping address</h3>
+      <div class="form-grid">
+        <div class="form-row"><div class="field"><label>First name</label><input placeholder="First" required></div><div class="field"><label>Last name</label><input placeholder="Last" required></div></div>
+        <div class="field"><label>Street address</label><input placeholder="380 Portage Ave" required></div>
+        <div class="form-row"><div class="field"><label>City</label><input placeholder="Palo Alto" required></div><div class="field"><label>ZIP code</label><input placeholder="94306" required></div></div>
+        <div class="field"><label>State</label><select><option>California</option><option>Texas</option><option>New York</option><option>Florida</option><option>Washington</option></select></div>
+      </div>
+    </div>
+    <div class="co-section">
+      <h3><span class="co-step">3</span> Delivery method</h3>
+      <div class="deliv">
+        <label class="deliv-opt sel"><span class="l"><input type="radio" name="deliv" checked> Local delivery, town to town</span><span class="p">Free</span></label>
+        <label class="deliv-opt"><span class="l"><input type="radio" name="deliv"> Nationwide ground, 2 to 4 days</span><span class="p">Free</span></label>
+        <label class="deliv-opt"><span class="l"><input type="radio" name="deliv"> Expedited, next business day</span><span class="p">$39</span></label>
+      </div>
+    </div>
+    <div class="co-section">
+      <h3><span class="co-step">4</span> Payment</h3>
+      <div class="pay-note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span>No payment is collected now. With Arbor you pay only upon completion of fulfillment. Your card is securely saved and charged once your order is delivered. (This is a concept demo, so no real card is processed.)</span></div>
+    </div>
+  </form>
+  <aside class="summary"><h3>Order summary</h3><div id="coItems"></div>
+    <div class="row"><span>Subtotal</span><span id="coSub">$0.00</span></div>
+    <div class="row"><span>Delivery</span><span style="color:var(--green);font-weight:600">Free</span></div>
+    <div class="row"><span>Due today</span><span>$0.00</span></div>
+    <div class="row total"><span>Total at fulfillment</span><span class="price" id="coTotal">$0.00</span></div>
+    <button class="btn btn-primary" id="placeBtn" type="button">Place order</button>
+    <p class="note">You will not be charged until your order is fully fulfilled and delivered.</p>
+  </aside>
+</div></div></section><footer class="footer"><div class="wrap">
+  <div class="footer-grid">
+    <div><div class="logo"><svg viewBox="0 0 40 28" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16 L20 5 L34 16"/></svg><span>arbor</span></div>
+      <p>The 21st century way to shop for your home. Trade-price building materials and home improvement supplies, delivered nationwide — town to town, door to door.</p>
+    </div>
+    <div><h5>Shop</h5><ul><li><a href="shop.html">Flooring</a></li><li><a href="shop.html">Bath &amp; Faucet</a></li><li><a href="shop.html">Hardware</a></li><li><a href="shop.html">Paint</a></li><li><a href="shop.html">Lawn &amp; Garden</a></li></ul></div>
+    <div><h5>Company</h5><ul><li><a href="index.html#story">Our Story</a></li><li><a href="index.html#pro">Pro Account</a></li><li><a href="index.html#studio">Design Studio</a></li><li><a href="#">Careers</a></li></ul></div>
+    <div><h5>Support</h5><ul><li><a href="#">Contact</a></li><li><a href="#">Shipping &amp; Delivery</a></li><li><a href="#">Returns</a></li><li><a href="#">Track Order</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Arbor. Palo Alto, CA.</span><span>Privacy &nbsp; • &nbsp; Terms &nbsp; • &nbsp; Accessibility</span></div>
+</div></footer><script src="assets/app.js"></script>
+<script>
+(function(){
+  var P=window.ARBOR_PRODUCTS||{}, ICN=window.ARBOR_ICONS||{};
+  function money(n){return "$"+n.toFixed(2);}
+  var items=window.ArborCart.get();
+  if(!items.length){ window.ArborCart.seed([{id:"p2",qty:1},{id:"p1",qty:2},{id:"p4",qty:1}]); items=window.ArborCart.get(); }
+  var sub=0, root=document.getElementById("coItems");
+  items.forEach(function(it){ var p=P[it.id]; if(!p) return; var line=p.price*it.qty; sub+=line;
+    root.insertAdjacentHTML("beforeend",'<div class="co-mini"><div class="thumb">'+(ICN[p.icon]||"")+'</div><div class="nm">'+p.name+'<div class="qt">Qty '+it.qty+'</div></div><div class="lp">'+money(line)+'</div></div>');
+  });
+  document.getElementById("coSub").textContent=money(sub);
+  document.getElementById("coTotal").textContent=money(sub);
+  // delivery option select styling
+  document.querySelectorAll(".deliv-opt").forEach(function(o){ o.addEventListener("click",function(){ document.querySelectorAll(".deliv-opt").forEach(function(x){x.classList.remove("sel");}); o.classList.add("sel"); }); });
+  document.getElementById("placeBtn").addEventListener("click",function(){
+    var f=document.getElementById("coForm");
+    if(f.checkValidity()){ window.arborToast("Order placed. You will be charged only on fulfillment. (Concept demo.)"); }
+    else { f.reportValidity(); }
+  });
+})();
+</script><div class="ribbon"><span class="dot"></span>Concept redesign by <a href="https://buildmytribe.io" target="_blank" rel="noopener">BuildMyTribe</a> — not affiliated with Arbor</div></body></html>
